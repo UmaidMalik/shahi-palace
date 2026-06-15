@@ -13,9 +13,9 @@ export function HeroSection() {
         className="absolute inset-0 -z-30 size-full object-cover"
       />
 
-      <div className="absolute inset-0 -z-20 bg-black/55" />
+      <div className="absolute inset-0 -z-20 bg-black/45" />
 
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(16,4,5,0.25)_42%,rgba(16,4,5,0.92)_100%)]" />
+      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_center,transparent_0%,rgba(19,6,8,0.2)_42%,rgba(19,6,8,0.86)_100%)]" />
 
       <div className="mx-auto flex max-w-4xl flex-col items-center px-5 py-20 text-center">
         <p className="mb-6 flex items-center gap-4 text-[0.65rem] uppercase tracking-[0.45em] text-palace-gold-light">

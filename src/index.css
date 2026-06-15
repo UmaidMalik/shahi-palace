@@ -1,14 +1,14 @@
 @import "tailwindcss";
 
 @theme {
-  --color-palace-black: #100405;
-  --color-palace-dark: #190809;
-  --color-palace-panel: #250d10;
-  --color-palace-border: #4a2520;
+  --color-palace-black: #130608;
+  --color-palace-dark: #1b090c;
+  --color-palace-panel: #2a1014;
+  --color-palace-border: #5a2d27;
   --color-palace-gold: #d6a313;
   --color-palace-gold-light: #e5bd51;
   --color-palace-cream: #f2e7d5;
-  --color-palace-muted: #a9978d;
+  --color-palace-muted: #b7a49a;
   --font-display: "Cormorant Garamond", Georgia, serif;
   --font-body: "Montserrat", Arial, sans-serif;
 }
