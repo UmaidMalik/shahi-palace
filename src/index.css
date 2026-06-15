@@ -1,1 +1,41 @@
 @import "tailwindcss";
+
+@theme {
+  --color-palace-black: #100405;
+  --color-palace-dark: #190809;
+  --color-palace-panel: #250d10;
+  --color-palace-border: #4a2520;
+  --color-palace-gold: #d6a313;
+  --color-palace-gold-light: #e5bd51;
+  --color-palace-cream: #f2e7d5;
+  --color-palace-muted: #a9978d;
+  --font-display: "Cormorant Garamond", Georgia, serif;
+  --font-body: "Montserrat", Arial, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100vh;
+  background: var(--color-palace-black);
+  color: var(--color-palace-cream);
+  font-family: var(--font-body);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  font: inherit;
+}
+
+::selection {
+  background: var(--color-palace-gold);
+  color: var(--color-palace-black);
+}
