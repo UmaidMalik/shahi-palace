@@ -7,23 +7,6 @@ import { AboutSection } from './components/home/AboutSection'
 import { ContactSection } from './components/home/ContactSection'
 import './App.css'
 
-function PlaceholderSection({
-  id,
-  title,
-}: {
-  id: string
-  title: string
-}) {
-  return (
-    <section
-      id={id}
-      className="flex min-h-[70vh] scroll-mt-20 items-center justify-center border-t border-palace-border/30 px-6"
-    >
-      <h2 className="font-display text-5xl text-palace-cream">{title}</h2>
-    </section>
-  )
-}
-
 function App() {
   const [language, setLanguage] = useState<Language>("en")
 
