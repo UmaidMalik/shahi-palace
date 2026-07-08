@@ -1,17 +1,19 @@
 import type { MenuCategory, MenuCategoryId } from "@/types/menu"
-
+import type { Language } from "@/types/language"
 export type SelectedCategory = "all" | MenuCategoryId
 
 interface MenuCategoryFilterProps {
   categories: MenuCategory[]
   selectedCategory: SelectedCategory
   onSelectCategory: (category: SelectedCategory) => void
+  language: Language
 }
 
 export function MenuCategoryFilter({
   categories,
   selectedCategory,
   onSelectCategory,
+  language,
 }: MenuCategoryFilterProps) {
   return (
     <div className="sticky top-20 z-30 border-y border-palace-border/40 bg-palace-black/95 py-4 backdrop-blur-md">
@@ -45,7 +47,7 @@ export function MenuCategoryFilter({
               ].join(" ")}
             >
               <span aria-hidden="true">{category.icon}</span>
-              {category.name.en}
+              {category.name[language]}
             </button>
           )
         })}

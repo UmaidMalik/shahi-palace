@@ -1,7 +1,12 @@
 import { ChevronDown, MapPin } from "lucide-react"
+import type { Language } from "@/types/language"
 import heroImage from "@/assets/images/ShahiPalace_Hero2_2880x2304.webp"
 
-export function HeroSection() {
+interface HeroSectionProps {
+  language: Language
+}
+
+export function HeroSection({ language }: HeroSectionProps) {
   return (
     <section
       id="home"
@@ -40,20 +45,22 @@ export function HeroSection() {
           <span className="h-px w-16 bg-palace-gold/60" />
         </div>
 
-        <p className="font-display text-xl italic text-palace-cream/90 sm:text-2xl">
-          Saveurs authentiques du sous-continent
-        </p>
-
-        <p className="mt-2 text-[0.65rem] uppercase tracking-[0.34em] text-palace-cream/60">
-          Authentic flavours of the subcontinent
-        </p>
+        {
+          language === "fr"
+          ? <p className="font-display text-xl italic text-palace-cream/90 sm:text-2xl">
+            Saveurs authentiques du sous-continent
+          </p>
+          : <p className="mt-2 text-[0.65rem] uppercase tracking-[0.34em] text-palace-cream/60">
+            Authentic flavours of the subcontinent
+          </p>
+        }
 
         <div className="mt-10 flex w-full max-w-md flex-col gap-3 sm:flex-row sm:justify-center">
           <a
             href="#menu"
             className="inline-flex min-h-12 flex-1 items-center justify-center bg-palace-gold px-7 text-xs font-semibold uppercase tracking-[0.2em] text-palace-black transition hover:bg-palace-gold-light"
           >
-            View Menu
+            {language === "fr" ? "Voir le menu" : "View Menu"}
           </a>
 
           <a
@@ -61,7 +68,7 @@ export function HeroSection() {
             className="inline-flex min-h-12 flex-1 items-center justify-center gap-2 border border-palace-cream/40 bg-black/20 px-7 text-xs font-semibold uppercase tracking-[0.2em] text-palace-cream transition hover:border-palace-gold hover:text-palace-gold"
           >
             <MapPin className="size-4" aria-hidden="true" />
-            Find Us
+            {language === "fr" ? "Nous trouver" : "Find Us"}
           </a>
         </div>
       </div>

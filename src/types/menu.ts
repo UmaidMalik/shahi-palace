@@ -8,6 +8,7 @@ export type MenuCategoryId =
   | "lamb"
   | "shrimp"
   | "fish"
+  | "wings"
   | "vegetarian"
   | "tandoori"
   | "rice"

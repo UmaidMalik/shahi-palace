@@ -1,15 +1,73 @@
 import { useState } from "react"
 import { Menu, Phone, X } from "lucide-react"
+import type { Language } from "@/types/language"
+
+interface NavbarProps {
+  language: Language,
+  onLanguageChange: (language: Language) => void
+}
 
 const navigationItems = [
-  { label: "Home", href: "#home" },
-  { label: "Menu", href: "#menu" },
-  { label: "About", href: "#about" },
-  { label: "FAQ", href: "#faq" },
-  { label: "Contact", href: "#contact" },
+  {
+    label: {
+      en: "Home",
+      fr: "Accueil",
+    },
+    href: "#home",
+  },
+  {
+    label: {
+      en: "Menu",
+      fr: "Menu",
+    },
+    href: "#menu",
+  },
+  {
+    label: {
+      en: "About",
+      fr: "À propos",
+    },
+    href: "#about",
+  },
+  {
+    label: {
+      en: "Contact",
+      fr: "Contact",
+    },
+    href: "#contact",
+  },
 ]
 
-export function Navbar() {
+function LanguageToggle({
+  language,
+  onLanguageChange,
+}: {
+  language: Language,
+  onLanguageChange: (language: Language) => void
+}) {
+  return (
+    <div className="flex items-center overflow-hidden border border-palace-border">
+      {(["en", "fr"] as const).map((option) => (
+        <button
+          key={option}
+          type="button"
+          onClick={() => onLanguageChange(option)}
+          className={[
+            "px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] transition",
+            language === option
+              ? "bg-palace-gold text-palace-black"
+              : "text-palace-cream/70 hover:text-palace-gold",     
+          ].join(" ")}
+          aria-pressed={language === option}
+        >
+          {option}
+        </button>
+      ))}
+    </div>
+  )
+}
+
+export function Navbar({language, onLanguageChange}: NavbarProps) {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   const closeMenu = () => setIsMenuOpen(false)
@@ -35,20 +93,25 @@ export function Navbar() {
         <nav className="hidden items-center gap-8 lg:flex" aria-label="Main navigation">
           {navigationItems.map((item) => (
             <a
-              key={item.label}
+              key={item.href}
               href={item.href}
               className="text-xs uppercase tracking-[0.2em] text-palace-cream/80 transition-colors hover:text-palace-gold"
             >
-              {item.label}
+              {item.label[language]}
             </a>
           ))}
+
+          <LanguageToggle
+            language={language}
+            onLanguageChange={onLanguageChange}
+          />
 
           <a
             href="tel:+15146850000"
             className="inline-flex items-center gap-2 border border-palace-gold/60 px-5 py-3 text-xs uppercase tracking-[0.2em] text-palace-gold transition hover:bg-palace-gold hover:text-palace-black"
           >
             <Phone className="size-4" aria-hidden="true" />
-            Call Us
+            {language === "fr" ? "Appeler" : "Call Us"}
           </a>
         </nav>
 
@@ -75,14 +138,34 @@ export function Navbar() {
           <div className="mx-auto flex max-w-7xl flex-col">
             {navigationItems.map((item) => (
               <a
-                key={item.label}
+                key={item.href}
                 href={item.href}
                 onClick={closeMenu}
                 className="border-b border-palace-border/30 py-4 text-sm uppercase tracking-[0.18em] text-palace-cream/85"
               >
-                {item.label}
+                {item.label[language]}
               </a>
             ))}
+
+            <div className="flex items-center border border-palace-border">
+              {(["en", "fr"] as const).map((option) => (
+                <button
+                  key={option}
+                  type="button"
+                  onClick={() => onLanguageChange(option)}
+                  className={[
+                    "px-3 py-2 text-xs uppercase tracking-[0.18em] transition",
+                    language === option
+                      ? "bg-palace-gold text-palace-black"
+                      : "text-palace-cream/70 hover:text-palace-gold",
+                  ].join(" ")}
+                >
+                  {option}
+                </button>
+              ))}
+            </div>
+
+
 
             <a
               href="tel:+15146850000"
@@ -90,7 +173,7 @@ export function Navbar() {
               className="mt-6 inline-flex items-center justify-center gap-2 bg-palace-gold px-5 py-4 text-sm font-semibold uppercase tracking-[0.18em] text-palace-black"
             >
               <Phone className="size-4" aria-hidden="true" />
-              Call Us
+              {language === "fr" ? "Appeler" : "Call Us"}
             </a>
           </div>
         </nav>

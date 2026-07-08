@@ -1,5 +1,5 @@
 import { useState } from "react"
-
+import type { Language } from "@/types/language"
 import { menuCategories, menuItems } from "@/data/menu"
 import type { MenuCategory } from "@/types/menu"
 
@@ -7,7 +7,11 @@ import { MenuCategoryFilter} from "@/components/menu/MenuCategoryFilter"
 import type { SelectedCategory } from "@/components/menu/MenuCategoryFilter"
 import { MenuItemRow } from "./MenuItemRow"
 
-export function MenuSection() {
+interface MenuSectionProps {
+  language: Language
+}
+
+export function MenuSection({ language }: MenuSectionProps) {
   const [selectedCategory, setSelectedCategory] =
     useState<SelectedCategory>("all")
 
@@ -24,11 +28,11 @@ export function MenuSection() {
     <section id="menu" className="scroll-mt-20 bg-palace-black">
       <div className="mx-auto max-w-4xl px-5 py-24 text-center sm:px-8">
         <p className="text-xs uppercase tracking-[0.4em] text-palace-gold">
-          Authentic Cuisine
+          {language === "fr" ? "Cuisine authentique" : "Authentic Cuisine"} 
         </p>
 
         <h2 className="mt-4 font-display text-5xl font-medium text-palace-cream sm:text-6xl">
-          Our Menu
+          {language === "fr" ? "Notre menu" : "Our Menu"}
         </h2>
 
         <div className="mx-auto my-7 flex items-center justify-center gap-3 text-palace-gold">
@@ -38,8 +42,11 @@ export function MenuSection() {
         </div>
 
         <p className="mx-auto max-w-2xl leading-7 text-palace-cream/65">
-          Explore traditional Pakistani and Indian dishes prepared with
-          carefully selected ingredients and aromatic spices.
+          {
+            language === "fr"
+            ? "Découvrez des plats pakistanais et indiens traditionnels préparés avec des ingrédients soigneusement sélectionnés et des épices aromatiques."
+            : "Explore traditional Pakistani and Indian dishes prepared with carefully selected ingredients and aromatic spices."
+          }
         </p>
       </div>
 
@@ -47,22 +54,34 @@ export function MenuSection() {
         categories={menuCategories}
         selectedCategory={selectedCategory}
         onSelectCategory={setSelectedCategory}
+        language={language}
       />
 
       <div className="mx-auto max-w-6xl px-5 py-16 sm:px-8">
         {selectedCategory === "all" ? (
           <div className="space-y-14">
             {menuCategories.map((category) => (
-              <MenuCategoryGroup key={category.id} category={category} />
+              <MenuCategoryGroup 
+                key={category.id} 
+                category={category} 
+                language={language}  
+              />
             ))}
           </div>
         ) : (
           <div className="mx-auto max-w-4xl">
-            <CategoryHeading category={selectedCategoryData} />
+            <CategoryHeading 
+              category={selectedCategoryData}
+              language={language}
+            />
 
             <div className="mt-4">
               {filteredItems.map((item) => (
-                <MenuItemRow key={item.id} item={item} />
+                <MenuItemRow 
+                  key={item.id} 
+                  item={item}
+                  language={language} 
+                />
               ))}
             </div>
           </div>
@@ -72,7 +91,10 @@ export function MenuSection() {
   )
 }
 
-function MenuCategoryGroup({ category }: { category: MenuCategory }) {
+function MenuCategoryGroup({ category, language }: {
+  category: MenuCategory,
+  language: Language
+}) {
   const items = menuItems.filter((item) => item.category === category.id)
 
   if (items.length === 0) {
@@ -81,11 +103,18 @@ function MenuCategoryGroup({ category }: { category: MenuCategory }) {
 
   return (
     <section className="mx-auto max-w-4xl">
-      <CategoryHeading category={category} />
+      <CategoryHeading 
+        category={category}
+        language={language} 
+      />
 
       <div className="mt-4">
         {items.map((item) => (
-          <MenuItemRow key={item.id} item={item} />
+          <MenuItemRow 
+            key={item.id} 
+            item={item}
+            language={language} 
+          />
         ))}
       </div>
     </section>
@@ -94,8 +123,10 @@ function MenuCategoryGroup({ category }: { category: MenuCategory }) {
 
 function CategoryHeading({
   category,
+  language
 }: {
   category: MenuCategory | undefined
+  language: Language
 }) {
   if (!category) {
     return null
@@ -109,12 +140,8 @@ function CategoryHeading({
 
       <div>
         <h3 className="font-display text-4xl text-palace-gold">
-          {category.name.en}
+          {category.name[language]}
         </h3>
-
-        <p className="mt-1 text-xs uppercase tracking-[0.2em] text-palace-muted">
-          {category.name.fr}
-        </p>
       </div>
     </header>
   )
