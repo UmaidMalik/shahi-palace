@@ -248,6 +248,7 @@ export const menuItems: MenuItem[] = [
     },
     price: 10,
     vegetarian: true,
+    image: "/images/menu/20240526_144747_ChanaSamosa.jpg",
   },
   {
     id: "chef-salad",
@@ -905,7 +906,7 @@ export const menuItems: MenuItem[] = [
       en: "Chicken marinated with yogurt, herbs and spices, then cooked in a tandoor.",
       fr: "Poulet mariné au yogourt, aux herbes et aux épices, puis cuit dans un tandoor.",
     },
-    price: 26,
+    price: 18,
   },
   {
     id: "half-chicken-tandoori",
@@ -918,7 +919,7 @@ export const menuItems: MenuItem[] = [
       en: "Chicken marinated with yogurt, herbs and spices, then cooked in a tandoor.",
       fr: "Poulet mariné au yogourt, aux herbes et aux épices, puis cuit dans un tandoor.",
     },
-    price: 14,
+    price: 13,
   },
   {
     id: "leg-chicken-tandoori",
@@ -931,7 +932,7 @@ export const menuItems: MenuItem[] = [
       en: "Chicken marinated with yogurt, herbs and spices, then cooked in a tandoor.",
       fr: "Poulet mariné au yogourt, aux herbes et aux épices, puis cuit dans un tandoor.",
     },
-    price: 8,
+    price: 7,
   },
   {
     id: "breast-chicken-tandoori",
@@ -944,7 +945,7 @@ export const menuItems: MenuItem[] = [
       en: "Chicken marinated with yogurt, herbs and spices, then cooked in a tandoor.",
       fr: "Poulet mariné au yogourt, aux herbes et aux épices, puis cuit dans un tandoor.",
     },
-    price: 9,
+    price: 8,
   },
   {
     id: "chicken-biryani",

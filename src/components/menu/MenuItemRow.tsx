@@ -30,7 +30,7 @@ export function MenuItemRow({ item, language }: MenuItemRowProps) {
             {item.image && (
               <span className="inline-flex items-center gap-1 text-xs text-palace-gold">
                 <ImageIcon className="size-3.5" aria-hidden="true" />
-                View photo
+                {language === "fr" ? "Voir photo" : "View photo"}
               </span>
             )}
           </div>
