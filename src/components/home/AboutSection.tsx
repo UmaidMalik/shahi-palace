@@ -124,8 +124,8 @@ export function AboutSection({ language }: AboutSectionProps) {
 
             <p>
               {language === "fr"
-                ? "Notre menu met à l’honneur les classiques pakistanais et indiens, des caris riches aux grillades tandoori, en passant par les biryanis, les entrées et les desserts traditionnels."
-                : "Our menu celebrates Pakistani and Indian classics, from rich curries and tandoori grills to biryanis, appetizers, and traditional desserts."}
+                ? "Notre menu met à l’honneur les classiques pakistanais et indiens, des caris riches aux grillades tandoori, en passant par les biryanis, et les entrées."
+                : "Our menu celebrates Pakistani and Indian classics, from rich curries and tandoori grills to biryanis and appetizers."}
             </p>
           </div>
 
