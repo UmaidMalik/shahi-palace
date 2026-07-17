@@ -132,10 +132,12 @@ function CategoryHeading({
     return null
   }
 
+  const Icon = category.icon
+
   return (
     <header className="flex items-end gap-4 border-b border-palace-gold/50 pb-4">
-      <span className="text-3xl" aria-hidden="true">
-        {category.icon}
+      <span className="flex size-12 items-center justify-center border border-palace-gold/50 text-palace-gold">
+        <Icon className="size-6" strokeWidth={1.5} aria-hidden="true" />
       </span>
 
       <div>

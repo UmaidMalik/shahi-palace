@@ -1,3 +1,5 @@
+import type { LucideIcon } from "lucide-react"
+
 export type MenuCategoryId =
   | "soups"
   | "appetizers"
@@ -25,7 +27,7 @@ export interface LocalizedText {
 export interface MenuCategory {
   id: MenuCategoryId
   name: LocalizedText
-  icon: string
+  icon: LucideIcon
 }
 
 export interface MenuItem {

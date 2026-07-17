@@ -1,3 +1,20 @@
+import {
+  Beef,
+  Candy,
+  ChefHat,
+  Drumstick,
+  Fish,
+  Flame,
+  GlassWater,
+  Leaf,
+  Salad,
+  Sandwich,
+  Shell,
+  Soup,
+  Utensils,
+  Wheat,
+} from "lucide-react"
+
 import type { MenuCategory, MenuItem } from "@/types/menu"
 
 import { imagePath } from "@/util/util"
@@ -9,7 +26,7 @@ export const menuCategories: MenuCategory[] = [
       en: "Soups",
       fr: "Soupes",
     },
-    icon: "🥣",
+    icon: Soup,
   },
   {
     id: "appetizers",
@@ -17,7 +34,7 @@ export const menuCategories: MenuCategory[] = [
       en: "Appetizers",
       fr: "Entrées",
     },
-    icon: "🥟",
+    icon: Utensils,
   },
   {
     id: "salads",
@@ -25,7 +42,7 @@ export const menuCategories: MenuCategory[] = [
       en: "Salads",
       fr: "Salades",
     },
-    icon: "🥗",
+    icon: Salad,
   },
   {
     id: "sandwiches",
@@ -33,7 +50,7 @@ export const menuCategories: MenuCategory[] = [
       en: "Sandwiches",
       fr: "Sandwiches",
     },
-    icon: "🌯",
+    icon: Sandwich,
   },
   {
     id: "chicken",
@@ -41,7 +58,7 @@ export const menuCategories: MenuCategory[] = [
       en: "Chicken",
       fr: "Poulet",
     },
-    icon: "🍗",
+    icon: Drumstick,
   },
   {
     id: "beef",
@@ -49,7 +66,7 @@ export const menuCategories: MenuCategory[] = [
       en: "Beef",
       fr: "Boeuf",
     },
-    icon: "🥩",
+    icon: Beef,
   },
   {
     id: "lamb",
@@ -57,7 +74,7 @@ export const menuCategories: MenuCategory[] = [
       en: "Lamb",
       fr: "Agneau",
     },
-    icon: "🍖",
+    icon: Beef,
   },
   {
     id: "shrimp",
@@ -65,7 +82,7 @@ export const menuCategories: MenuCategory[] = [
       en: "Shrimp",
       fr: "Crevette",
     },
-    icon: "🦐",
+    icon: Shell,
   },
   {
     id: "fish",
@@ -73,7 +90,7 @@ export const menuCategories: MenuCategory[] = [
       en: "Fish",
       fr: "Poisson",
     },
-    icon: "🐟",
+    icon: Fish,
   },
   {
     id: "wings",
@@ -81,7 +98,7 @@ export const menuCategories: MenuCategory[] = [
       en: "Wings",
       fr: "Ailes",
     },
-    icon: "🍗",
+    icon: Drumstick,
   },
   {
     id: "vegetarian",
@@ -89,7 +106,7 @@ export const menuCategories: MenuCategory[] = [
       en: "Vegetarian",
       fr: "Végétarien",
     },
-    icon: "🌿",
+    icon: Leaf,
   },
   {
     id: "tandoori",
@@ -97,7 +114,7 @@ export const menuCategories: MenuCategory[] = [
       en: "Tandoori",
       fr: "Tandoori",
     },
-    icon: "🔥",
+    icon: Flame,
   },
   {
     id: "rice",
@@ -105,7 +122,7 @@ export const menuCategories: MenuCategory[] = [
       en: "Rice",
       fr: "Riz",
     },
-    icon: "🍚",
+    icon: Wheat,
   },
   {
     id: "chefs-special",
@@ -113,15 +130,15 @@ export const menuCategories: MenuCategory[] = [
       en: "Chef's Special",
       fr: "Spécial du chef",
     },
-    icon: "🍽️",
+    icon: ChefHat,
   },
   {
     id: "tandoori-bread",
     name: {
       en: "Tandoori Bread",
-      fr: "Pain tandoori",
+      fr: "Pains tandoori",
     },
-    icon: "🫓",
+    icon: Wheat,
   },
   {
     id: "drinks",
@@ -129,7 +146,7 @@ export const menuCategories: MenuCategory[] = [
       en: "Drinks",
       fr: "Boissons",
     },
-    icon: "🥤",
+    icon: GlassWater,
   },
   {
     id: "desserts",
@@ -137,7 +154,7 @@ export const menuCategories: MenuCategory[] = [
       en: "Desserts",
       fr: "Desserts",
     },
-    icon: "🍮",
+    icon: Candy,
   },
 ]
 

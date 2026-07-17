@@ -33,7 +33,8 @@ export function MenuCategoryFilter({
 
         {categories.map((category) => {
           const isSelected = selectedCategory === category.id
-
+          const Icon = category.icon
+          
           return (
             <button
               key={category.id}
@@ -46,7 +47,7 @@ export function MenuCategoryFilter({
                   : "border-palace-border text-palace-cream/70 hover:border-palace-gold hover:text-palace-gold",
               ].join(" ")}
             >
-              <span aria-hidden="true">{category.icon}</span>
+              <Icon className="size-4" strokeWidth={1.6} aria-hidden="true" />
               {category.name[language]}
             </button>
           )
