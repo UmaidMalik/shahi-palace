@@ -41,22 +41,30 @@ const navigationItems = [
 function LanguageToggle({
   language,
   onLanguageChange,
+  fullWidth = false,
 }: {
-  language: Language,
+  language: Language
   onLanguageChange: (language: Language) => void
+  fullWidth?: boolean
 }) {
   return (
-    <div className="flex items-center overflow-hidden border border-palace-border">
+    <div
+      className={[
+        "inline-flex items-center overflow-hidden border border-palace-border",
+        fullWidth ? "w-full" : "w-auto",
+      ].join(" ")}
+    >
       {(["en", "fr"] as const).map((option) => (
         <button
           key={option}
           type="button"
           onClick={() => onLanguageChange(option)}
           className={[
-            "px-3 py-2 text-xs font-semibold uppercase tracking-[0.16em] transition",
+            "px-4 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] transition",
+            fullWidth ? "flex-1" : "",
             language === option
               ? "bg-palace-gold text-palace-black"
-              : "text-palace-cream/70 hover:text-palace-gold",     
+              : "text-palace-cream/70 hover:text-palace-gold",
           ].join(" ")}
           aria-pressed={language === option}
         >
@@ -147,22 +155,26 @@ export function Navbar({language, onLanguageChange}: NavbarProps) {
               </a>
             ))}
 
-            <div className="flex items-center border border-palace-border">
-              {(["en", "fr"] as const).map((option) => (
-                <button
-                  key={option}
-                  type="button"
-                  onClick={() => onLanguageChange(option)}
-                  className={[
-                    "px-3 py-2 text-xs uppercase tracking-[0.18em] transition",
-                    language === option
-                      ? "bg-palace-gold text-palace-black"
-                      : "text-palace-cream/70 hover:text-palace-gold",
-                  ].join(" ")}
-                >
-                  {option}
-                </button>
-              ))}
+            <div className="mt-6 flex items-center justify-between">
+
+              <div className="inline-flex items-center overflow-hidden border border-palace-border">
+                {(["en", "fr"] as const).map((option) => (
+                  <button
+                    key={option}
+                    type="button"
+                    onClick={() => onLanguageChange(option)}
+                    className={[
+                      "px-4 py-2.5 text-xs font-semibold uppercase tracking-[0.18em] transition",
+                      language === option
+                        ? "bg-palace-gold text-palace-black"
+                        : "text-palace-cream/70 hover:text-palace-gold",
+                    ].join(" ")}
+                    aria-pressed={language === option}
+                  >
+                    {option}
+                  </button>
+                ))}
+              </div>
             </div>
 
 
