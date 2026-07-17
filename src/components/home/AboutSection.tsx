@@ -118,8 +118,8 @@ export function AboutSection({ language }: AboutSectionProps) {
 
             <p>
               {language === "fr"
-                ? "Shahi Palace accueille les familles, les amis et les amateurs de cuisine réconfortante avec des plats parfumés, généreux et préparés avec soin."
-                : "Shahi Palace welcomes families, friends, and lovers of comforting food with aromatic, generous dishes prepared with care."}
+                ? "Shahi Palace accueille les familles, les amis et les amateurs de cuisine réconfortante avec des plats parfumés, préparés avec soin."
+                : "Shahi Palace welcomes families, friends, and lovers of comforting food with aromatic, dishes prepared with care."}
             </p>
 
             <p>
