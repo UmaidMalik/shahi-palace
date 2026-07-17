@@ -5,7 +5,12 @@ import tailwindcss from '@tailwindcss/vite'
 
 // https://vite.dev/config/
 export default defineConfig({
-  base: process.env.GITHUB_PAGES === "true" ? "/shahi-palace/" : "/",
+  base:
+  process.env.CUSTOM_DOMAIN === "true"
+    ? "/"
+    : process.env.GITHUB_PAGES === "true"
+      ? "/shahi-palace/"
+      : "/",
 
   plugins: [react(), tailwindcss()],
   resolve: {
