@@ -1,5 +1,7 @@
 import type { MenuCategory, MenuItem } from "@/types/menu"
 
+import { imagePath } from "@/util/util"
+
 export const menuCategories: MenuCategory[] = [
   {
     id: "soups",
@@ -167,6 +169,7 @@ export const menuItems: MenuItem[] = [
     },
     price: 3,
     vegetarian: true,
+    image: imagePath("samosas.jpg"),
   },
   {
     id: "meat-samosa",
@@ -248,7 +251,7 @@ export const menuItems: MenuItem[] = [
     },
     price: 10,
     vegetarian: true,
-    image: "/images/menu/20240526_144747_ChanaSamosa.jpg",
+    image: imagePath("chana-samosa.jpg"),
   },
   {
     id: "chef-salad",
@@ -318,7 +321,7 @@ export const menuItems: MenuItem[] = [
       fr: "Sandwich dans un pain naan avec poulet, laitue, et sauce à l’ail",
     },
     price: 7,
-    vegetarian: false,
+    image: imagePath("chicken-roll.jpg"),
   },
   {
     id: "kebab-roll",
@@ -389,6 +392,7 @@ export const menuItems: MenuItem[] = [
     },
     price: 15,
     featured: true,
+    image: imagePath("butter-chicken.jpg"),
   },
   {
     id: "chicken-balti",
@@ -441,6 +445,7 @@ export const menuItems: MenuItem[] = [
       fr: "Poulet cuit dans une sauce au cari avec poivron vert et champignons.",
     },
     price: 14,
+    image: imagePath("chicken-shahi-special.jpg"),
   },
   {
     id: "chicken-tikka-masala",
@@ -480,6 +485,7 @@ export const menuItems: MenuItem[] = [
       fr: "Boeuf cuit avec des tomates, du gingembre, de la coriandre et du piment vert.",
     },
     price: 14,
+    image: imagePath("beef-balti.jpg"),
   },
   {
     id: "beef-curry",
@@ -573,17 +579,18 @@ export const menuItems: MenuItem[] = [
     price: 15,
   },
   {
-    id: "lamb-korma",
+    id: "lamb-curry",
     category: "lamb",
     name: {
-      en: "Lamb Korma",
-      fr: "Korma d’agneau",
+      en: "Lamb Curri",
+      fr: "Cari d’agneau",
     },
     description: {
-      en: "Tender lamb in a smooth and aromatic cream sauce.",
-      fr: "Agneau tendre dans une sauce crémeuse et aromatique.",
+      en: "Tender lamb in a smooth and aromatic curry sauce.",
+      fr: "Agneau tendre dans une sauce cari et aromatique.",
     },
     price: 15,
+    image: imagePath("lamb-curry.jpg"),
   },
   {
     id: "lamb-palak",
@@ -757,6 +764,7 @@ export const menuItems: MenuItem[] = [
     },
     price: 10,
     vegetarian: true,
+    image: imagePath("palak-paneer.jpg"),
   },
   {
     id: "daal-mash",
@@ -799,6 +807,7 @@ export const menuItems: MenuItem[] = [
     },
     price: 10,
     vegetarian: true,
+    image: imagePath("chana-masala.jpg"),
   },
   {
     id: "cholay-bathooray",
@@ -841,6 +850,7 @@ export const menuItems: MenuItem[] = [
     },
     price: 10,
     vegetarian: true,
+    image: imagePath("okra-masala.jpg"),
   },
   {
     id: "eggplant",
@@ -855,6 +865,7 @@ export const menuItems: MenuItem[] = [
     },
     price: 10,
     vegetarian: true,
+    image: imagePath("eggplant.jpg"),
   },
   {
     id: "chicken-tikka",
@@ -946,6 +957,7 @@ export const menuItems: MenuItem[] = [
       fr: "Poulet mariné au yogourt, aux herbes et aux épices, puis cuit dans un tandoor.",
     },
     price: 8,
+    image: imagePath("chicken-tandoori-breast.jpg"),
   },
   {
     id: "chicken-biryani",
@@ -960,6 +972,7 @@ export const menuItems: MenuItem[] = [
     },
     price: 13,
     featured: true,
+    image: imagePath("chicken-biryani.jpg"),
   },
   {
     id: "lamb-biryani",

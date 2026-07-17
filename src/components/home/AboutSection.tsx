@@ -1,11 +1,11 @@
 import { Award, Heart, Leaf, MapPin } from "lucide-react";
-
 import type { Language } from "@/types/language";
+import { imagePath } from "@/util/util";
 
-import biryaniImage from "@/assets/images/ShahiPalace_ChickenBiryani_2880x2304.jpg"
-import butterChickenImage from "@/assets/images/ShahiPalace_ButterChicken_2880x2304.jpg"
-import tandooriImage from "@/assets/images/ShahiPalace_ChickenTandooriBreast_2880x2304.jpg"
-import samosaImage from "@/assets/images/ShahiPalace_Samosas_2880x2304.jpg"
+const biryaniImage = imagePath("chicken-biryani.jpg");
+const butterChickenImage = imagePath("butter-chicken.jpg");
+const tandooriImage = imagePath("chicken-tandoori-breast.jpg");
+const samosaImage = imagePath("samosas.jpg");
 
 interface AboutSectionProps {
     language: Language

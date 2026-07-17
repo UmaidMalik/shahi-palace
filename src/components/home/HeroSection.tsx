@@ -1,6 +1,8 @@
 import { ChevronDown, MapPin } from "lucide-react"
 import type { Language } from "@/types/language"
-import heroImage from "@/assets/images/ShahiPalace_Hero2_2880x2304.webp"
+import { imagePath } from "@/util/util"
+
+const heroImage =  imagePath("hero2.webp");
 
 interface HeroSectionProps {
   language: Language
