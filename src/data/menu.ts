@@ -1202,7 +1202,7 @@ export const menuItems: MenuItem[] = [
       en: "Naan stuffed with potatoes",
       fr: "Naan farci de pommes de terre",
     },
-    price: 6,
+    price: 8,
   },
   {
     id: "keema-naan",
