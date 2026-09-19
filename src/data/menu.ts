@@ -1215,7 +1215,7 @@ export const menuItems: MenuItem[] = [
       en: "Naan stuffed with minced beef",
       fr: "Naan farci de boeuf haché",
     },
-    price: 6,
+    price: 8,
   },
   {
     id: "onion-naan",
@@ -1228,7 +1228,7 @@ export const menuItems: MenuItem[] = [
       en: "Naan stuffed with onions",
       fr: "Naan farci aux oignons",
     },
-    price: 6,
+    price: 8,
   },
   {
     id: "chicken-naan",
@@ -1241,7 +1241,7 @@ export const menuItems: MenuItem[] = [
       en: "Naan stuffed with chicken",
       fr: "Naan farci au poulet",
     },
-    price: 6,
+    price: 8,
   },
   {
     id: "paneer-naan",
@@ -1254,7 +1254,7 @@ export const menuItems: MenuItem[] = [
       en: "Naan stuffed with paneer",
       fr: "Naan farci au paneer",
     },
-    price: 6,
+    price: 8,
   },
   {
     id: "roti",
