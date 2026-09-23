@@ -541,7 +541,7 @@ export const menuItems: MenuItem[] = [
       en: "Chunks of beef slow-cooked in a spicy stew.",
       fr: "Morceaux de boeuf cuits lentement dans un ragoût épicé.",
     },
-    price: 14,
+    price: 12,
   },
   {
     id: "haleem",
@@ -554,7 +554,7 @@ export const menuItems: MenuItem[] = [
       en: "A slow-cooked blend of lentils and beef, then puréed.",
       fr: "Mélange de lentilles et de boeuf lentement mijoté, puis réduit en purée.",
     },
-    price: 10,
+    price: 12,
   },
   {
     id: "beef-kebab-balti",
@@ -908,7 +908,7 @@ export const menuItems: MenuItem[] = [
       en: "Minced beef mixed with spices and grilled on skewers in a tandoor.",
       fr: "Boeuf haché avec diverses épices, grillé sur broche dans un tandoor.",
     },
-    price: 10,
+    price: 12,
   },
   {
     id: "chicken-seekh-kebab",
