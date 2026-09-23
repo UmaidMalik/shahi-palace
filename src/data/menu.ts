@@ -580,7 +580,7 @@ export const menuItems: MenuItem[] = [
       en: "Beef trotters slowly simmered in a spicy stew.",
       fr: "Pieds de boeuf mijotés lentement dans un ragoût épicé.",
     },
-    price: 10,
+    price: 12,
   },
   {
     id: "lamb-balti",
