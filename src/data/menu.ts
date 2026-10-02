@@ -593,7 +593,7 @@ export const menuItems: MenuItem[] = [
       en: "Lamb cooked with tomatoes, ginger, coriander and green chili.",
       fr: "Agneau cuit avec tomates, gingembre, coriandre et piment vert.",
     },
-    price: 15,
+    price: 16,
   },
   {
     id: "lamb-curry",
@@ -606,7 +606,7 @@ export const menuItems: MenuItem[] = [
       en: "Tender lamb in a smooth and aromatic curry sauce.",
       fr: "Agneau tendre dans une sauce cari et aromatique.",
     },
-    price: 15,
+    price: 16,
     image: imagePath("lamb-curry.jpg"),
   },
   {
@@ -620,7 +620,7 @@ export const menuItems: MenuItem[] = [
       en: "Lamb cooked with spinach purée and curry sauce.",
       fr: "Agneau cuit avec une purée d’épinards et de la sauce au cari.",
     },
-    price: 15,
+    price: 16,
   },
   {
     id: "shrimp-balti",
@@ -934,7 +934,7 @@ export const menuItems: MenuItem[] = [
       en: "Chicken marinated with yogurt, herbs and spices, then cooked in a tandoor.",
       fr: "Poulet mariné au yogourt, aux herbes et aux épices, puis cuit dans un tandoor.",
     },
-    price: 18,
+    price: 20,
   },
   {
     id: "half-chicken-tandoori",
@@ -1002,7 +1002,7 @@ export const menuItems: MenuItem[] = [
       en: "Fragrant basmati rice prepared with lamb and aromatic spices.",
       fr: "Riz basmati parfumé, préparé avec de l’agneau et des épices aromatiques.",
     },
-    price: 15,
+    price: 16,
     featured: true,
   },
   {
