@@ -501,7 +501,7 @@ export const menuItems: MenuItem[] = [
       en: "Beef cooked with tomatoes, ginger, coriander and green chili.",
       fr: "Boeuf cuit avec des tomates, du gingembre, de la coriandre et du piment vert.",
     },
-    price: 14,
+    price: 15,
     image: imagePath("beef-balti.jpg"),
   },
   {
@@ -515,7 +515,7 @@ export const menuItems: MenuItem[] = [
       en: "Slow-cooked beef served in a rich spiced curry.",
       fr: "Boeuf mijoté dans un cari riche et épicé.",
     },
-    price: 14,
+    price: 15,
   },
   {
     id: "beef-palak",
@@ -528,7 +528,7 @@ export const menuItems: MenuItem[] = [
       en: "Beef cooked with spinach purée and curry sauce.",
       fr: "Boeuf cuit avec une purée d’épinards et de la sauce au cari.",
     },
-    price: 14,
+    price: 15,
   },
   {
     id: "beef-nihari",
@@ -567,7 +567,7 @@ export const menuItems: MenuItem[] = [
       en: "Kebab simmered with tomatoes, ginger, coriander and green chili.",
       fr: "Kebab mijoté avec tomates, gingembre, coriandre et piment vert.",
     },
-    price: 14,
+    price: 15,
   },
   {
     id: "beef-paya",
@@ -1016,7 +1016,7 @@ export const menuItems: MenuItem[] = [
       en: "Fragrant basmati rice prepared with beef and aromatic spices.",
       fr: "Riz basmati parfumé, préparé avec du bœuf et des épices aromatiques.",
     },
-    price: 14,
+    price: 15,
     featured: true,
   },
   {
