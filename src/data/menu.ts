@@ -407,7 +407,7 @@ export const menuItems: MenuItem[] = [
       en: "Tender chicken in a creamy tomato and butter sauce.",
       fr: "Poulet tendre dans une sauce crémeuse aux tomates et au beurre.",
     },
-    price: 15,
+    price: 16,
     featured: true,
     image: imagePath("butter-chicken.jpg"),
   },
