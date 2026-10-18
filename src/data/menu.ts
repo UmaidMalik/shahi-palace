@@ -1150,7 +1150,7 @@ export const menuItems: MenuItem[] = [
       en: "Lamb chops marinated in yogurt and spices, then cooked in a tandoor.",
       fr: "Côtelettes d’agneau marinées au yogourt et aux épices, puis cuites dans un tandoor.",
     },
-    price: 25,
+    price: 28,
   },
   {
     id: "plain-naan",
